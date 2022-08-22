@@ -3,13 +3,13 @@ import React from 'react';
 import Avatar from '../atoms/Avatar';
 
 
-export default function UserListItem() {
+export default function UserListItem(props) {
   return (
-    <a href="#" className="users__list-item">
+    <a href={'/users/${props.id}'}className="users__list-item">
           <div className="users__list-item-photo">
-            <Avatar />         
+            <Avatar src={props.src} />         
           </div>
-          <div className="users__list-item-name">John Walter</div>
+          <div className="users__list-item-name">{props.name}</div>
         </a>    
   )
 }
