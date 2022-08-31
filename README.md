@@ -1,3 +1,7 @@
+Projeto desenvolvido em aula feito junto ao professor Cássio Lacerda
+Link do projeto abaixo 
+GitHub - cassiolacerda/tera-react-project-202205](https://github.com/cassiolacerda/tera-react-project-202205)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
