@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Avatar from '../atoms/Avatar';
-
+import Avatar from "../atoms/Avatar";
 
 export default function UserListItem(props) {
   return (
-    <a href={'/users/${props.id}'}className="users__list-item">
-          <div className="users__list-item-photo">
-            <Avatar src={props.src} />         
-          </div>
-          <div className="users__list-item-name">{props.name}</div>
-        </a>    
-  )
+    <Link to={"/users/${props.id}"} className="users__list-item">
+      <div className="users__list-item-photo">
+        <Avatar src={props.src} />
+      </div>
+      <div className="users__list-item-name">{props.name}</div>
+    </Link>
+  );
 }

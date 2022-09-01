@@ -1,15 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import { UserListItem } from './';
+import { UserListItem } from "./";
 
-export default function UserListWrapper() {
+export default function UserListWrapper(props) {
   return (
     <div className="users__list">
-           <UserListItem id="1" name="Nayara" src=""/>
-           <UserListItem id="2" name="Jô" src=""/>
-           <UserListItem id="3" name="Luis" src=""/>
-           <UserListItem id="4" name="Rafael" src=""/>
-           <UserListItem id="5" name="Loki" src=""/>
-      </div>
-  )
+      {props.users
+        .sort((a, b) => a.fn.localeCompare(b.fn))
+        .map((user) => (
+          <UserListItem
+            key={user.id}
+            id={user.id}
+            name={`${user.fn} ${user.ln}`}
+            src={user.avatar}
+          />
+        ))}
+    </div>
+  );
 }
