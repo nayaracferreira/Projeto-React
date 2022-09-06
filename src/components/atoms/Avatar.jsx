@@ -1,9 +1,7 @@
 import React from 'react'
 
-import user1 from '../../images/placeholders/user-1.jpg';
-
-export default function Avatar() {
+export default function Avatar(props) {
   return (
-    <img src={user1}className="responsive avatar" alt="" />
+    <img src={props.src}className="responsive avatar" alt="" />
   )
 }
